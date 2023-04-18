@@ -2,14 +2,7 @@
 
 # Find out what libraries are required by executables in a path.
 
-# find * -type f | xargs file | grep EABI.*SYSV.*dynamic | sed 's/:.*//' > ../dynamic_list
-# cat ../dynamic_list | xarfs readelf -d | grep NEEDED | sort -u | sed -e 's/.*\[//' -e 's/\].*//' | while read LL
-# do
-# LLL=$(find . -name $LL);
-# if [ -z "$LLL" ]
-# then echo $LL appears to be missing
-# fi
-# done
+# Python version of check-libs.sh
 
 from os import walk as Walk
 from os import path as Path
